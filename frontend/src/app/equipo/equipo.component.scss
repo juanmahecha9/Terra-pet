@@ -1,0 +1,41 @@
+.title {
+    border: 1px solid red;
+    font-family: 'Sniglet', cursive;
+    font-size: 2em;
+    text-align: center;
+    padding: 1em;
+}
+
+.cont-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+        border: 1px solid purple;
+        font-family: 'Caladea', serif;
+        width: 20%;
+        margin: 10px;
+    
+        &__picture {
+            border: 1px solid green;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+    
+        &__name {
+            
+        }
+    
+        &__rol {
+            font-style: italic;
+            text-align: center;
+        }
+    
+    }
+}
+
