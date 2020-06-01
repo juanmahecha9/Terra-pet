@@ -39,3 +39,12 @@ Public
 Routes: contiene el archivo de rutas
 Server: contiene el archivo del servidor
 app.js es el archivo que principal que llama todo lo anteriorn
+
+***************************
+
+Frontend
+
+-En el index principal se agregan las letras que acordamos a usar (ya solo es llamarla en el CSS de cada de nuestro componentes)
+-En el css principal puse un normalizador de css: Esto es para resetear los estilos generales
+-Se agrega la carpeta "img" dentro de la carpeta "assets", aquí dentro van los recursos estatico de la página (imagenes, iconos etc)
+-Se borra todo el código que viene por defecto en el componente principal (app.component.html)
