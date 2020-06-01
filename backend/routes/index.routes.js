@@ -16,6 +16,8 @@ router.get("/new", control.showData);
 router.put("/actualizar/:id", control.upgradeData);
 //eliminar datos de la Db
 router.delete("/borrar/:id", control.delateData);
+//Login en la app
+router.post("/login", control.login)
 
 module.exports = router;
 //exportar las rutas

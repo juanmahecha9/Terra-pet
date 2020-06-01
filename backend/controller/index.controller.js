@@ -1,7 +1,7 @@
 //requeir el modelo del usuario
 const User = require("../models/user.model");
-//realizar envio de correo para los datos
-var nodemailer = require ('nodemailer');
+//correo
+const correoV = require("../helpers/registro");
 
 //prueba del servidor
 function prueba(req, res) {
@@ -9,12 +9,13 @@ function prueba(req, res) {
 }
 
 //Creacion de los procesos de ingreso del usuario a la DB
-const  createData  = async (req, res) => {
+const createData = async (req, res) => {
   //CREAR
-  const {name, email, password} = req.body; //parametros que el envian solicitudes
-  const data = new User({name, email, password}); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
-
-await  data.save((err, newData) => {
+  const { name, email, password } = req.body; //parametros que el envian solicitudes
+  const data = new User({ name, email, password }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
+  const correo = data.email;
+  const nombre = data.name;
+  await data.save((err, newData) => {
     if (err) {
       res.status(500).send({
         message: "Server error ",
@@ -31,10 +32,14 @@ await  data.save((err, newData) => {
           producto: newData,
           statusCode: 200,
         });
+
+        //
+        correoV(correo, nombre);
+        //
       }
     }
   }); //Guardar
-}
+};
 
 function showData(req, res) {
   //VISUALIZAR
@@ -121,10 +126,27 @@ function delateData(req, res) {
     }
   });
 }
+
+const login = async (req, res) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
+  if (!user) return res.status(401).send("No registrado");
+
+  if (user) {
+    //Traer el metodo creado
+    user.compararPassword(password, function (err, isMatch) {
+      if (err) throw err;
+      if (isMatch == true) return res.status(200).send("Contraseña Valida");
+      if (isMatch != true) return res.status(401).send("Contraseña Invalida");
+    });
+  }
+};
+
 module.exports = {
   prueba,
   createData,
   showData,
   upgradeData,
   delateData,
+  login,
 };
