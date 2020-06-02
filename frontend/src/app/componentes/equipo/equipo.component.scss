@@ -13,12 +13,14 @@
 
     .card {
         border: 1px solid purple;
+        border-radius: 4px;
         font-family: 'Caladea', serif;
         width: 20%;
         margin: 10px;
     
         &__picture {
             border: 1px solid green;
+            border-radius: 4px 4px 0 0;
             height: 200px;
             overflow: hidden;
 
@@ -28,12 +30,19 @@
         }
     
         &__name {
-            
+            padding: .5em;   
+            background-color: #acabab;
         }
     
         &__rol {
             font-style: italic;
             text-align: center;
+            padding: .5em;
+        }
+
+        &:hover {
+            transform: rotate(4deg);
+            transition: ease-in-out .2s;
         }
     
     }
