@@ -9,6 +9,7 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { InicioTerraComponent } from './componentes/inicio-terra/inicio-terra.component';
+import { FiltrosComponent } from './componentes/filtros/filtros.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InicioTerraComponent } from './componentes/inicio-terra/inicio-terra.co
     RegistroComponent,
     InicioComponent,
     NosotrosComponent,
-    InicioTerraComponent
+    InicioTerraComponent,
+    FiltrosComponent
   ],
   imports: [
     BrowserModule,
