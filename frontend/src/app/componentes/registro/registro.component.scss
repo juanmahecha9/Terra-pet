@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url(../src/app/login/img/animals.jpg);
+   // background: url(../src/app/login/img/animals.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Sniglet', cursive;
@@ -134,7 +134,7 @@ font-family: 'Sniglet', cursive;
 }
 
 .contenedor-form .formulario {
-    display: none;
+    display: block;
     padding: 40px;
 }
 
