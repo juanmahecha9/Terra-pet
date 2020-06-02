@@ -5,7 +5,13 @@ import { EquipoComponent } from './componentes/equipo/equipo.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 
-const routes: Routes = [
+import { InicioComponent } from'./componentes/inicio/inicio.component'
+import { from } from 'rxjs';
+
+const routes: Routes = [ 
+  {path: '',
+  redirectTo: '/inicio', pathMatch: 'full'
+  },
   {
 
     path: 'team',
@@ -18,6 +24,10 @@ const routes: Routes = [
   {
     path: 'regitro',
     component: RegistroComponent
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent
   }
 ];
 
