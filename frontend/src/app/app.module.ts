@@ -8,7 +8,6 @@ import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
-import { InicioTerraComponent } from './componentes/inicio-terra/inicio-terra.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { FiltrosComponent } from './componentes/filtros/filtros.component';
     RegistroComponent,
     InicioComponent,
     NosotrosComponent,
-    InicioTerraComponent,
     FiltrosComponent
   ],
   imports: [
