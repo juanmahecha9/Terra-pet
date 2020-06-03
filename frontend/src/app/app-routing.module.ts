@@ -7,7 +7,6 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { NosotrosComponent} from './componentes/nosotros/nosotros.component'
 
 import { InicioComponent } from'./componentes/inicio/inicio.component';
-import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
 
 const routes: Routes = [
@@ -32,17 +31,12 @@ const routes: Routes = [
     component: InicioComponent
   },
   {
-<<<<<<< HEAD
     path: 'aboutus',
     component: NosotrosComponent
   },
   {
     path: 'adopciones',
     component: FiltrosComponent
-=======
-    path: 'nosotros',
-    component:NosotrosComponent
->>>>>>> ff9f12fb235a2ff7eacb909bb405c02e5bf0efc1
   }
 ];
 
