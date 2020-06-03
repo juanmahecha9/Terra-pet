@@ -9,9 +9,9 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
-<<<<<<< HEAD
+
 import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.component';
-=======
+
 /* Importar funciones o metodos http */
 /* habilita los verbos http */
 import {HttpClientModule} from '@angular/common/http';
@@ -19,7 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule}  from '@angular/forms';
 /* importamos o concectamos el servicio al modulo principal */
 import {productoService} from './service/producto.service';
->>>>>>> 29b9c3f5ccbcf4672a94f94c5789bca595baa615
+
 
 @NgModule({
   declarations: [
