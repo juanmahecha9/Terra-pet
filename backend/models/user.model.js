@@ -29,7 +29,7 @@ const user = Schema(
     },pet: {
       type: String,
       require: true,
-    },padress: {
+    },adress: {
       type: String,
       require: true,
     },phone: {

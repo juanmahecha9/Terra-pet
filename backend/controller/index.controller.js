@@ -13,8 +13,8 @@ function prueba(req, res) {
 //Creacion de los procesos de ingreso del usuario a la DB
 const createData = async (req, res) => {
   //CREAR
-  const { name, email, password } = req.body; //parametros que el envian solicitudes
-  const data = new User({ name, email, password }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
+  const { name, email, password, ocupation, income, pet, adress, phone } = req.body; //parametros que el envian solicitudes
+  const data = new User({ name, email, password, ocupation, income, pet, adress, phone }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
   const correo = data.email;
   const nombre = data.name;
 
