@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { EquipoComponent } from './componentes/equipo/equipo.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
-import { NosotrosComponent} from './componentes/nosotros/nosotros.component'
 
 import { InicioComponent } from'./componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
@@ -32,17 +31,12 @@ const routes: Routes = [
     component: InicioComponent
   },
   {
-<<<<<<< HEAD
     path: 'aboutus',
     component: NosotrosComponent
   },
   {
     path: 'adopciones',
     component: FiltrosComponent
-=======
-    path: 'nosotros',
-    component:NosotrosComponent
->>>>>>> ff9f12fb235a2ff7eacb909bb405c02e5bf0efc1
   }
 ];
 
