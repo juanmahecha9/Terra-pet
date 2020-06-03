@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+.carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,body,html{height:100%}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: rgb(235, 235, 8)!important;
+    }
+}
+
+.navbar{background-color:rgb(9, 240, 143)}.page-footer,.top-nav-collapse{background-color:rgba(241, 100, 18, 0.8)}@media only screen and (max-width:768px){.navbar{background-color:#5b5772}}
+
+@media (min-width: 600px){
+    .navbar.scrolling-navbar {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        -webkit-transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+        transition: background 0.5s ease-in-out,padding 0.5s ease-in-out;
+    }
+}
+
+.navbar .navbar-brand i{margin: 0 35px;}
+.logo-wrapper i{margin: 15px 0px; color: #5ea25f;}
+.sn-bg {
+    background-image: url(../../../assets/mari/perro2.jpg);
+}
+.side-nav .sidenav-bg:after, .side-nav .sidenav-bg.mask-strong:after {
+    background: rgba(46, 194, 26, 0.7);
+}
+.roww .media img {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
+}
+.roww .media:hover img {
+    -webkit-transform: rotate(360deg) !important;
+            transform: rotate(360deg) !important;
+}
+body{
+    font-size: .7rem;
+}
+.section2 p,p{
+    font-size: 1.2rem;
+}
+
+*{font-family: 'Roboto', sans-serif;}
+
+.card-img, .card-img-top{height: 180px;}
+
+.section2 .col-lg-4{
+    margin: 15px auto;
+}
+
+address {
+    margin-bottom: 0rem;
+}
+footer h5{font-weight: bold;}
+
+.div,img,h1,h2,h3{
+    text-align: center;
+    color: #5b5772;
+    /* font-family: 'Dancing Script', cursive; */
+    /* width: 100px; */
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.div,img,h3{
+    text-align: center;
+    color: #fff;
+    /* font-family: 'Dancing Script', cursive; */
+    /* width: 100px; */
+    margin-left: auto;
+  margin-right: auto;
+
+}
+.div,img,h2{
+    text-align: center;
+    color: #5ea25f;
+    /* font-family: 'Dancing Script', cursive; */
+    /* width: 100px; */
+    margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+.imgRedonda {
+    width: 100px;
+    height:100px;
+    border-radius:100px;
+    text-align: center;
+   
+   
+}
+section{
+    padding: 40px 60px;
+}
+.section1{
+    /* margin: 50px auto 30px auto; */
+    /* padding-top: 100px; */
+    width:100%;
+    padding:0;
+    margin:0 auto;
+}
+.section1 .roww{
+    display: flex;
+    padding: 50px 100px;
+}
+.row{
+    padding: 40px 20px;
+}
+.row-not{
+    padding: 0;
+}
+.img-thumbnail{
+    background: transparent;
+    width:100px;
+    height: 100px;
+    border:none;
+}
+.container{
+    width: 100%;
+}
+#carousel-example-2,#carousel-example-1{
+    display: block;
+    width:100%;
+    margin: 0 auto;
+}
+#carousel-example-2 img,#carousel-example-1 img{
+    height: 100vh;
+}
+
+
+
+/* .container .card {
+    width: 400px;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px black;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px auto;
+    transition: all 0.25s ease-out;
+} */
+.content-two{
+      width: 100%;
+    /* font-family: sans-serif; */
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+
+
+
+.gallery {
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-width: 33%;
+-moz-column-width: 33%;
+column-width: 33%; }
+.gallery .pics {
+-webkit-transition: all 350ms ease;
+transition: all 350ms ease; }
+.gallery .animation {
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1); }
+
+@media (max-width: 450px) {
+.gallery {
+-webkit-column-count: 1;
+-moz-column-count: 1;
+column-count: 1;
+-webkit-column-width: 100%;
+-moz-column-width: 100%;
+column-width: 100%;
+}
+}
+
+@media (max-width: 400px) {
+.btn.filter {
+padding-left: 1.1rem;
+padding-right: 1.1rem;
+}
+}
+
+.galeria{padding: 80px 50px;}
+
+
+
+.logo-wrapper img { width:68% }
+
+.navbar .navbar-brand img {
+    height: 40px;
+    margin-left: 40px;
+}
+
+.carousel-caption .h3-responsive {
+    font-size: 250%;
+    font-weight: bold;
+}

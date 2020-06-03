@@ -19,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule}  from '@angular/forms';
 /* importamos o concectamos el servicio al modulo principal */
 import {productoService} from './service/producto.service';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {productoService} from './service/producto.service';
     InicioComponent,
     NosotrosComponent,
     FiltrosComponent,
-    BarraMenuComponent
+    BarraMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
