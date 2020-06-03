@@ -9,6 +9,7 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
+import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FiltrosComponent } from './componentes/filtros/filtros.component';
     RegistroComponent,
     InicioComponent,
     NosotrosComponent,
-    FiltrosComponent
+    FiltrosComponent,
+    BarraMenuComponent
   ],
   imports: [
     BrowserModule,
