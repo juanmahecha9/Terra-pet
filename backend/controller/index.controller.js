@@ -30,7 +30,7 @@ const createData = async (req, res) => {
           statusCode: 400,
         });
       } else {
-        const token = jwt.sign({_id: newData._id}, 'secretkey');
+        const token = jwt.sign({ _id: newData._id }, 'secretkey');
         res.status(200).send({
           status: "Nueva data",
           producto: newData,
@@ -141,10 +141,20 @@ const login = async (req, res) => {
     //Traer el metodo creado
     user.compararPassword(password, function (err, isMatch) {
       if (err) throw err;
-      if (isMatch == true) return res.status(200).send("Contraseña Valida");
+      if (isMatch == true) {
+        const token = jwt.sign({ _id: user._id }, 'secretkey')
+        return res.status(200).send(
+          {
+            value: "Contraseña Valida", token: token
+          });
+      }
       if (isMatch != true) return res.status(401).send("Contraseña Invalida");
     });
   }
+};
+
+const private = (req, res)=>{
+
 };
 
 module.exports = {
