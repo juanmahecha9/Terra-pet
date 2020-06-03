@@ -6,21 +6,22 @@
     box-sizing: border-box;
 }
 
-body {
-   // background: url(../src/app/login/img/animals.jpg);
-    background-size: cover;
+.body{
+    width: 100%;
+    
+    background-image: url('../../../assets/32048.jpg');
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Sniglet', cursive;
-    padding-top: 30px;
-
+    background-size: cover;
+   height: 1050px;
 }
 
 .contenedor-form {
-    background: rgba(0, 0, 0, 0.7); /*color del cuandro grande total*/
-    background-color: #5b5772 ;
+    //background: rgba(0, 0, 0, 0.7); /*color del cuandro grande total*/
+    background-color:rgba($color: #5b5772, $alpha: 0.7) ;
     max-width: 500px;
     width: 100%;
-    margin: 48px auto;
+    margin: 48px ;
     border-radius: 5px;
     color: #fff;
     position: relative;
