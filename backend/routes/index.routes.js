@@ -17,7 +17,12 @@ router.put("/actualizar/:id", control.upgradeData);
 //eliminar datos de la Db
 router.delete("/borrar/:id", control.delateData);
 //Login en la app
-router.post("/login", control.login)
+router.post("/login", control.login);
+
+
+
+//Rutas privadas
+router.get('/private',control.verifyToken, control.private)
 
 module.exports = router;
 //exportar las rutas

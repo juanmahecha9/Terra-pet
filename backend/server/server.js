@@ -45,8 +45,7 @@ app.use((req, res, next) => {
 });
 
 //middlewares
-//Permite la concexion entre servidores
-app.use(cors());
+
 //intercambio de informacion entre la api y la peticion http
 app.use(express.json());
 //me devuelve eñ estado de la solicitud http
