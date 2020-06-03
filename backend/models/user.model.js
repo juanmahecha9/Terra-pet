@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const carritoSchema =mongoose.carritoSchema;
+//Esquema para la coleccion
 //Esquema para la coleccion
 const bcrypt = require("bcrypt");
 
