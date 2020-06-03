@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'adopciones',
     component: FiltrosComponent
-  }
+  },
+ 
 ];
 
 @NgModule({

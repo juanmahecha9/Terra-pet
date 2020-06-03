@@ -22,6 +22,7 @@ import {productoService} from './service/producto.service';
 import { FooterComponent } from './componentes/footer/footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
     NosotrosComponent,
     FiltrosComponent,
     BarraMenuComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
