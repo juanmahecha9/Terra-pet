@@ -7,6 +7,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 
 import { InicioComponent } from'./componentes/inicio/inicio.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
+import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+
 
 const routes: Routes = [
   {path: '',
