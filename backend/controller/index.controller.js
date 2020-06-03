@@ -153,9 +153,24 @@ const login = async (req, res) => {
   }
 };
 
-const private = (req, res)=>{
+const private = (req, res) => {
 
-};
+
+
+  res.json([{
+    nombre: 'Juan',
+    apellido: 'Mahecha'
+  },
+  {
+    nombre: 'Juan David',
+    apellido: 'Mahecha Cruz'
+  }]);
+}
+
+function verifyToken(req, res, next){
+  //crear la cabecera de autenticacion
+ console.log(req.headers.authorization);
+}
 
 module.exports = {
   prueba,
@@ -164,4 +179,8 @@ module.exports = {
   upgradeData,
   delateData,
   login,
+  private,
+  verifyToken
 };
+
+
