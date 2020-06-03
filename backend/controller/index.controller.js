@@ -2,6 +2,8 @@
 const User = require("../models/user.model");
 //correo
 const correoV = require("../helpers/registro");
+//token de autenticacion
+const jwt = require('jsonwebtoken');
 
 //prueba del servidor
 function prueba(req, res) {
@@ -15,6 +17,7 @@ const createData = async (req, res) => {
   const data = new User({ name, email, password }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
   const correo = data.email;
   const nombre = data.name;
+
   await data.save((err, newData) => {
     if (err) {
       res.status(500).send({
@@ -27,10 +30,12 @@ const createData = async (req, res) => {
           statusCode: 400,
         });
       } else {
+        const token = jwt.sign({_id: newData._id}, 'secretkey');
         res.status(200).send({
           status: "Nueva data",
           producto: newData,
           statusCode: 200,
+          token: token
         });
 
         //

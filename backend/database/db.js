@@ -7,7 +7,7 @@ const config = require("../private/config.db.json");
 //Variables de entorno, que vienen desde en dotenv, para tener un desarrollo mas fluido y generico
 const dbLocal = config.database.url;
 const web = config.database.web;
-const dbWeb =`mongodb+srv://${web}@cluster0-8djtc.mongodb.net/test?retryWrites=true&w=majority`;
+const dbWeb =`mongodb+srv://${web}juanmahecha9509:<password>@cluster0-8djtc.mongodb.net/test?retryWrites=true&w=majority`;
 
 const url = dbLocal;
 

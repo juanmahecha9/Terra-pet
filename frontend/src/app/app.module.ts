@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+/* Modulos o componentes creados */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EquipoComponent } from './componentes/equipo/equipo.component';
@@ -9,7 +9,17 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
+<<<<<<< HEAD
 import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.component';
+=======
+/* Importar funciones o metodos http */
+/* habilita los verbos http */
+import {HttpClientModule} from '@angular/common/http';
+/* permite el uso de los componentes del formulario para tomar los datos */
+import {FormsModule}  from '@angular/forms';
+/* importamos o concectamos el servicio al modulo principal */
+import {productoService} from './service/producto.service';
+>>>>>>> 29b9c3f5ccbcf4672a94f94c5789bca595baa615
 
 @NgModule({
   declarations: [
@@ -24,9 +34,11 @@ import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [productoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

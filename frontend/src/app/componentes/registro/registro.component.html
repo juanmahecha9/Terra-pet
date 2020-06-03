@@ -5,20 +5,25 @@
     </div>
     <div class="formulario">
         <h2>Crea tu Cuenta</h2>
-        <form action="#">
-            <input type="text" placeholder="A que te dedicas?" required>
-            <input type="text" placeholder="Ingresos">
-            <input type="text" placeholder="Mascota de interes">
-            <input type="text" placeholder="Usuario" required>
-            <input type="password" placeholder="Constraseña" required>
-            <input type="email" placeholder="Correo Electronico" required>
-            <input type="text" placeholder="Dirección">
-            <input type="text" placeholder="Telefono">
-
-       <!-- <input type="submit" value="Registrarse">--> 
+        <form #DataFormulario="ngForm" (ngSubmit)="formularioUp()">
+            <input type="text" placeholder="A que te dedicas?" name="ocupation" #nombre="ngModel"
+                [(ngModel)]="Producto.ocupation" autofocus required>
+            <input type="text" placeholder="Ingresos" #nombre="ngModel" [(ngModel)]="Producto.income" required
+                name="income">
+            <input type="text" placeholder="Mascota de interes" name="pet" #nombre="ngModel" [(ngModel)]="Producto.pet">
+            <input type="text" placeholder="Nombre" name="name" #nombre="ngModel" [(ngModel)]="Producto.name" required>
+            <input type="password" placeholder="Constraseña" name="password" #nombre="ngModel"
+                [(ngModel)]="Producto.password" required>
+            <input type="email" placeholder="Correo Electronico" name="email" #nombre="ngModel"
+                [(ngModel)]="Producto.email" required>
+            <input type="text" placeholder="Dirección" name="adress" #nombre="ngModel" [(ngModel)]="Producto.adress">
+            <input type="text" placeholder="Telefono" name="phone" #nombre="ngModel" [(ngModel)]="Producto.phone">
+            <br>
+            <button type="submit">Enviar</button>
+            <!-- <input type="submit" value="Registrarse">-->
         </form>
 
-    <div class="padre">
+        <!-- <div class="padre">
         <div class="reset-password">
         <a href="#">Cancelar</a>
     </div> 
@@ -26,7 +31,7 @@
         <a href="#">Enviar</a>
     </div> 
     </div>
-    
+     -->
 
     </div>
 </div>
