@@ -33,9 +33,9 @@ const createData = async (req, res) => {
         const token = jwt.sign({ _id: newData._id }, 'secretkey');
         res.status(200).send({
           status: "Nueva data",
+          token: token,
           producto: newData,
           statusCode: 200,
-          token: token
         });
 
         //
@@ -169,7 +169,16 @@ const private = (req, res) => {
 
 function verifyToken(req, res, next){
   //crear la cabecera de autenticacion
- console.log(req.headers.authorization);
+ if(!req.headers.authorization){
+   return res.status(401).send('No autorizado');
+ }
+ const token = req.headers.authorization.split(' ')[1];
+ if (token == 'null'){
+   return res.status(401).sen('No autorizado')
+ }
+ const data = jwt.verify(token, 'secretkey')
+ req.userId= data._id;
+ next();git 
 }
 
 module.exports = {
