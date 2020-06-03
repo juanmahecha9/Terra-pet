@@ -6,7 +6,6 @@ import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 
 import { InicioComponent } from'./componentes/inicio/inicio.component';
-import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
 
 const routes: Routes = [
