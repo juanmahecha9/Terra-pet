@@ -5,10 +5,11 @@ import { EquipoComponent } from './componentes/equipo/equipo.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 
-import { InicioComponent } from'./componentes/inicio/inicio.component'
-import { from } from 'rxjs';
+import { InicioComponent } from'./componentes/inicio/inicio.component';
+import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+import { FiltrosComponent } from './componentes/filtros/filtros.component';
 
-const routes: Routes = [ 
+const routes: Routes = [
   {path: '',
   redirectTo: '/inicio', pathMatch: 'full'
   },
@@ -28,6 +29,14 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: InicioComponent
+  },
+  {
+    path: 'aboutus',
+    component: NosotrosComponent
+  },
+  {
+    path: 'adopciones',
+    component: FiltrosComponent
   }
 ];
 

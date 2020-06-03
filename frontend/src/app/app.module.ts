@@ -16,7 +16,7 @@ import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.componen
 /* habilita los verbos http */
 import {HttpClientModule} from '@angular/common/http';
 /* permite el uso de los componentes del formulario para tomar los datos */
-import {FormsModule}  from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 /* importamos o concectamos el servicio al modulo principal */
 import {productoService} from './service/producto.service';
 
