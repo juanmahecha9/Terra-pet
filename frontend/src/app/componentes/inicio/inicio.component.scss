@@ -1,27 +1,20 @@
- /* Portada */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+/* Portada */
 
 .contenedor_portada{
     width: 100%;
     height: 400px;
-    background-image: url('../../../assets/img/imagenes-hosman2/imagenesh/Kiwoko-nombre.jpg');
+    background-image: url(../../../assets/img/imagenes-hosman2/imagenesh/Kiwoko-nombre.jpg);
     background-size: 100%;
     animation: movimiento 10s linear infinite alternate;
     position: relative;
-.contenedor_detalles{
-    width: 80%;
-    text-align: center;
-    margin: auto;
-    .detalles{
-        margin: auto;
-        text-align: center;
-        p{
-            color: black;
-        }
-        h1{
-            color: black
-        }
-    }
-}
 }
 
 @keyframes movimiento{
@@ -37,7 +30,7 @@
     height: 100%;
     position: absolute;
     background: -webkit-linear-gradient(left,#5ea25f, #c0b768);
-    opacity:0.4;
+    opacity: 0.5;
 } 
 
 .contenedor_detalles{
@@ -148,20 +141,15 @@ hr{
 
 .galeria-general{
     background: #5ea25f;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    padding-left: 20px;
-    .galeria{
-        width: 90%;
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        position: relative;
-    }
 }
 
-
+.galeria{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative; 
+}
 
 .galeria2{
     width: 100%;
@@ -178,6 +166,20 @@ hr{
     position: relative;
 }
 
+@media screen and (max-width: 768px){
+    .imagenes{
+        height: 200px;
+    }
+    
+} 
+
+@media screen and (max-width: 600px){
+    .imagenes{
+        height: 150px;
+    }
+    
+} 
+
 .imagenes img{
     width: 100%;
     height: 100%;
@@ -187,10 +189,15 @@ hr{
 .Titul{
     text-align: center;
     font-size: 56px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 500;
     color: #fff;
+    padding-top: 20px;
 }
 
-
-/* Footer*/
+@media screen and (max-width: 768px){
+    .Titul{
+        font-size: 33px;
+    }
+    
+} 
