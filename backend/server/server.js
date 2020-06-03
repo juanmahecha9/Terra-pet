@@ -7,6 +7,7 @@ const express = require("express"),
 const config = require("../config/config.json");
 //archivo configuracion rutas
 const router = require("../routes/index.routes");
+const carro= require ("../routes/carrito.routes")
 
 const app = express();
 
@@ -53,6 +54,6 @@ app.use(morgan("dev"));
 
 //rutas
 app.use('/api',router);
-
+app.use('/api',carro);
 
 module.exports = app;
