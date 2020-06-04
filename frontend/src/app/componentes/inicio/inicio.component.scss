@@ -34,7 +34,7 @@
 } 
 
 .contenedor_detalles{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     max-width: 1200px;
@@ -53,7 +53,7 @@
 }
 
 .detalles h1{
-    color: black;
+    color: white;
     font-size: 50px;
     font-weight: 100;
     margin-bottom: 20px;
@@ -63,11 +63,11 @@
 
 .detalles p{
    
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 100;
     margin-left: 10px;
     margin-right: 20px;
-    color: black;
+    color: white;
 }
 
 .detalles button{
@@ -80,7 +80,6 @@
     margin-top: 20px;
     transition: background 300ms;
     border-radius: 50px;
-    margin-left: 10px;
 }
 
 .detalles button:hover{
@@ -95,6 +94,7 @@
         font-size: 30px;
     }
 }
+
 
 /* Articulo */
 
@@ -124,14 +124,14 @@ hr{
 }
 
 .parrafo{
-
     margin-bottom: 13px;
     font-weight: 500;
     text-align: justify;
     line-height: 24px;
-    color: #5ea25f
+    color: #5ea25f;
+    font-size: 20px;
+    margin: auto;
 }
-
 
 @media screen and (max-width: 768px){
     .importa-adoptar{
@@ -164,7 +164,7 @@ hr{
 
 .imagenes{
     width: 20%;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     position: relative;
 }
@@ -174,14 +174,7 @@ hr{
         height: 200px;
     }
     
-} 
-
-@media screen and (max-width: 600px){
-    .imagenes{
-        height: 150px;
-    }
-    
-} 
+}  
 
 .imagenes img{
     width: 100%;
@@ -204,3 +197,34 @@ hr{
     }
     
 } 
+
+/* RESPONSIVE */
+
+/* 600PX */
+
+@media screen and (max-width: 600px){
+    .detalles p{
+        font-size: 13px;
+    }
+    .detalles h1{
+        font-size: 25px;
+    }
+    .importar-adoptar{
+        font-size: 25px;
+    }
+    .parrafo{
+        font-size: 16px;
+    }
+    .detalles button{
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+    .imagenes{
+        height: 100px;
+    }
+    .Titul{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+}
