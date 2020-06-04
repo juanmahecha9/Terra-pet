@@ -5,7 +5,7 @@ const carrito = carritoSchema(
   {
     name: {
       type: String,
-      
+
     },
     descripcion: {
       type: String,
