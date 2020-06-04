@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+
+import { PhotoService } from '../../service/photo.service'
+import { Photo } from '../../interfaces/Photo'
 
 @Component({
   selector: 'app-filtros',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltrosComponent implements OnInit {
 
-  constructor() { }
+  photos: Photo[] = [];
 
-  ngOnInit(): void {
+  constructor(
+    private photoService: PhotoService,
+    private router: Router 
+  ) { }
+
+  ngOnInit() {
+    this.photoService.getPhotos()
+      .subscribe(
+        res => {
+          this.photos = res;
+        },
+        err => console.log(err)
+      )
   }
+
+  selectedCard(id: string) {
+    this.router.navigate(['/photos', id]);
+  }
+
 
 }

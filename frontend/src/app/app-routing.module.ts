@@ -36,9 +36,10 @@ const routes: Routes = [
     component: NosotrosComponent
   },
   {
-    path: 'adopciones',
+    path: 'photos',
     component: FiltrosComponent
   },
+  
  
 ];
 
