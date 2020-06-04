@@ -26,7 +26,7 @@ const createData = async (req, res) => {
             res.status(500).send({message:"error en el servidor"});
         }else{
             if(!animalesEncontrados){
-                res.status(200).send({message:"no fue posible actualizar bitch"});
+                res.status(200).send({message:"no fue posible ver bitch"});
             }else {res.status(200).send({
                 status: 'animales Encontrados',
                 producto: animalesEncontrados
@@ -44,7 +44,7 @@ function matarAnimal(req,res){
             res.status(500).send({message:'error al guardar'});
         }else{
             if(!animalAsesinado){
-                res.status(404).send({message:'no se pudo asesinart animal'});
+                res.status(404).send({message:'no se pudo asesinar animal'});
             }else{
                 res.status(200).send({
                     status:'Animal asesinado',
@@ -54,8 +54,18 @@ function matarAnimal(req,res){
         }
     })
 }
-exports.aniquilarAnimales=function animalesAniquilados(req,res,next){
-    Carrito.remove({},
-        animalesAniquilados)
+const aniquilarAnimales=function animalesAniquilados(req,res,next){
+    Carrito.purge({},
+        (animalesAniquilados)=>{
+            if(err){ res.status(500).send({message:'error al matar animales'});
+
+            }else{
+                if(!animalesAniquilados){
+                    res.status(400).send({message:'no se pudo aniquilar animales'});
+                }else{
+                    res.status(200).send({message:'animales aniquilidos para hacer salchichas'})
+                }
+            }
+        })
 }
-module.exports = { createData, getData,matarAnimal }
+module.exports = { createData, getData,matarAnimal,aniquilarAnimales }
