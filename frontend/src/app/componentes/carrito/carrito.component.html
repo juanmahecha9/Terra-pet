@@ -16,6 +16,11 @@
     <button>Guardar</button>
 </form>
 
-<!-- <div *ngFor="let contAnimal of animalesEncontrados">
 
-</div> -->
+<div *ngFor="let contAnimal of animalesEncontrados">
+
+    {{contAnimal}}
+</div>
+
+<p>{{animalesEncontrados}}</p>
+<button (click)="mostrarAnimales()">Muestra</button>

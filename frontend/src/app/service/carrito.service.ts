@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 
 export class CarritoService {
-  apiUrl = 'http://localhost:8000/api/';
+  apiUrl = 'http://localhost:8000/api';
 
   constructor(private http:HttpClient) {
 
@@ -17,6 +17,10 @@ export class CarritoService {
     const params = JSON.stringify(animalNuevo);
     const options = {headers: new HttpHeaders({'Content-type': 'application/json'})};
 
-    return this.http.post(this.apiUrl + 'agregaranimal', params, options).pipe(res => res);
+    return this.http.post(this.apiUrl + '/agregaranimal', params, options).pipe(res => res);
+   }
+
+   getData() {
+     return this.http.get(this.apiUrl + '/mostrar').pipe(res=>res);
    }
 }
