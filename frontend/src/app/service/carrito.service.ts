@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 
 export class CarritoService {
-  apiUrl = 'http://localhost:8000/api';
+  apiUrl = 'http://localhost:8000/api/';
 
   constructor(private http:HttpClient) {
 

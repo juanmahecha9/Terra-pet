@@ -13,7 +13,7 @@ export class CarritoComponent implements OnInit {
   public animalesEncontrados: any[];
 
   constructor(private service: CarritoService) {
-
+    this.Carrito = new carrito();
   }
 
   ngOnInit(): void {
