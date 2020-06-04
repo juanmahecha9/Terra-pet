@@ -21,7 +21,7 @@ const createData = async (req, res) => {
     })
 }
  function getData(req, res){
-    animal.find((err, animalesEncontrados) => {
+    Carrito.find((err, animalesEncontrados) => {
         if (err) {
             res.status(500).send({message:"error en el servidor"});
         }else{
@@ -36,4 +36,26 @@ const createData = async (req, res) => {
     }
     })
 }
-module.exports = { createData, getData }
+
+function matarAnimal(req,res){
+    let animalid=req.params.id;
+    Carrito.findByIdAndDelete(animalid,(err,animalAsesinado)=>{
+        if (err){
+            res.status(500).send({message:'error al guardar'});
+        }else{
+            if(!animalAsesinado){
+                res.status(404).send({message:'no se pudo asesinart animal'});
+            }else{
+                res.status(200).send({
+                    status:'Animal asesinado',
+                    producto: animalAsesinado
+                });
+            }
+        }
+    })
+}
+exports.aniquilarAnimales=function animalesAniquilados(req,res,next){
+    Carrito.remove({},
+        animalesAniquilados)
+}
+module.exports = { createData, getData,matarAnimal }
