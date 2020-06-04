@@ -3,20 +3,12 @@ const carritoSchema=mongoose.Schema;
 
 const carrito = carritoSchema(
   {
-    name: {
-      type: String,
+    name: String,
+    descripcion:  String,
+    region: String,
+      
+    }
 
-    },
-    descripcion: {
-      type: String,
-      
-      
-    },
-    region: {
-      type: String,
-      
-    },
-  },
   
 );
 
