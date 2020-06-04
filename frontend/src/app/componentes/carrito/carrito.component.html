@@ -1,1 +1,21 @@
+<h2>Carrito neko kawaii</h2>
 
+<form #carritoFormulario='ngForm' (ngSubmit)="formularioUp()">
+    <label for="">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="nombre" required #nombre [(ngModel)]="Carrito.name">
+    <br>
+
+    <label for="">Descripción:</label>
+    <input type="text" name="descripcion" id="descripcion" placeholder="descripcion" required #nombre [(ngModel)]="Carrito.description">
+    <br>
+
+    <label for="">Region:</label>
+    <input type="text" name="region" id="region" placeholder="region" required #nombre [(ngModel)]="Carrito.region">
+    <br>
+
+    <button>Guardar</button>
+</form>
+
+<!-- <div *ngFor="let contAnimal of animalesEncontrados">
+
+</div> -->

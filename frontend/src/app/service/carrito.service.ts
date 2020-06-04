@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class CarritoService {
-  apiUrl = 'http://localhost:3000/api';
+  apiUrl = 'http://localhost:8000/api';
 
   constructor(private http:HttpClient) {
 

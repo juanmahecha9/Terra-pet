@@ -1,7 +1,7 @@
 const mongoose= require ('mongoose')
 const carritoSchema=mongoose.Schema;
 
-const carrito = carritoSchema(
+const carrito = new carritoSchema(
   {
     name: String,
     descripcion:  String,
