@@ -54,18 +54,31 @@ function matarAnimal(req,res){
         }
     })
 }
-const aniquilarAnimales=function animalesAniquilados(req,res,next){
-    Carrito.purge({},
-        (animalesAniquilados)=>{
-            if(err){ res.status(500).send({message:'error al matar animales'});
-
-            }else{
-                if(!animalesAniquilados){
-                    res.status(400).send({message:'no se pudo aniquilar animales'});
-                }else{
-                    res.status(200).send({message:'animales aniquilidos para hacer salchichas'})
-                }
-            }
-        })
-}
-module.exports = { createData, getData,matarAnimal,aniquilarAnimales }
+const aniquilarAnimales = async (req, res) => {
+    //VISUALIZAR
+    
+     //acceder a la informacion y usar la funcion find busca error  o los productos o datos que encunetre en la DB
+     // se accede a la base de datos directamente
+     await Carrito.remove((err, animalesEncontrados) => {
+       if (err) {
+         res.status(500).send({
+           message: "Server error ",
+         });
+       } else {
+         if (!animalesEncontrados) {
+           res.status(200).send({
+             message: "No fue posible encontrar los registros",
+             statusCode: 400,
+           });
+         } else {
+           res.status(200).send({
+             status: "Productos encontrados",
+             producto: animalesEncontrados,
+             statusCode: 200,
+           });
+         }
+       }
+     });
+   }
+   
+module.exports = { createData, getData,matarAnimal,aniquilarAnimales}
