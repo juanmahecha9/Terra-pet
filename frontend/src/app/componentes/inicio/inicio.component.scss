@@ -203,11 +203,22 @@ hr{
 /* 600PX */
 
 @media screen and (max-width: 600px){
+
+    .contenedor_portada{
+        height: 300px;
+    }
+    .contenedor-animais{
+        padding: 30px 0;
+    }
     .detalles p{
         font-size: 13px;
+        font-weight: 300;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .detalles h1{
         font-size: 25px;
+        font-weight: 300
     }
     .importar-adoptar{
         font-size: 25px;
