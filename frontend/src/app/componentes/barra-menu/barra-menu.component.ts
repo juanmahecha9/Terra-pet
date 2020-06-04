@@ -9,7 +9,7 @@ export class BarraMenuComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   toggleMenu(barra) {
@@ -21,5 +21,6 @@ export class BarraMenuComponent implements OnInit {
 
     console.log(barra.style.animationName);
   }
+  
 
 }

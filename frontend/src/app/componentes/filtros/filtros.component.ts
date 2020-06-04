@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 
-import { PhotoService } from '../../service/photo.service'
+import { PhotoService } from '../../services/photo.service'
 import { Photo } from '../../interfaces/Photo'
 
 @Component({

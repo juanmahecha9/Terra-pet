@@ -1,47 +1,56 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-/* Modulos o componentes creados */
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
+import { AppComponent } from './app.component';
+import { SignupComponent } from './componentes/signup/signup.component';
+import { SigninComponent } from './componentes/signin/signin.component';
+
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.component';
 import { EquipoComponent } from './componentes/equipo/equipo.component';
-import { LoginComponent } from './componentes/login/login.component';
-import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
 
-import { BarraMenuComponent , } from './componentes/barra-menu/barra-menu.component';
-import { AuthGuard } from './auth.guard';
+
 /* Importar funciones o metodos http */
 /* habilita los verbos http */
-import {HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 /* permite el uso de los componentes del formulario para tomar los datos */
-import {FormsModule} from '@angular/forms';
 /* importamos o concectamos el servicio al modulo principal */
-import {productoService} from './service/producto.service';
+import {productoService} from './services/producto.service';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
-
 @NgModule({
   declarations: [
     AppComponent,
-    EquipoComponent,
-    LoginComponent,
-    RegistroComponent,
-    InicioComponent,
-    NosotrosComponent,
-    FiltrosComponent,
-    BarraMenuComponent,
-    FooterComponent,
-    CarritoComponent,
+    SignupComponent,
+    SigninComponent,
+        BarraMenuComponent,
+        EquipoComponent,
+        InicioComponent,
+        NosotrosComponent,
+        FiltrosComponent,
+        FooterComponent,
+        CarritoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [ AuthGuard,productoService,],    bootstrap: [AppComponent]
+  providers: [
+    AuthGuard,productoService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
