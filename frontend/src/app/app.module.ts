@@ -21,6 +21,7 @@ import {FormsModule} from '@angular/forms';
 /* importamos o concectamos el servicio al modulo principal */
 import {productoService} from './service/producto.service';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
     FiltrosComponent,
     BarraMenuComponent,
     FooterComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
