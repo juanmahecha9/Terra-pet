@@ -9,7 +9,7 @@ const dbLocal = config.database.url;
 const web = config.database.web;
 const dbWeb =`mongodb+srv://${web}@cluster0-u4h6w.mongodb.net/test?retryWrites=true&w=majority`;
 
-const url = dbWeb;
+const url = dbLocal;
 
 mongoose
   .connect(url, {
