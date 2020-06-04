@@ -19,7 +19,8 @@ router.delete("/borrar/:id", control.delateData);
 //Login en la app
 router.post("/login", control.login);
 
-
+//borramos todo
+router.delete('/borrado', control.dropAll);
 
 //Rutas privadas
 router.get('/private',control.verifyToken, control.private)

@@ -1,8 +1,7 @@
 //configuracion del servidor
 const express = require("express"),
   mongoose = require("mongoose"),
-  morgan = require("morgan"),
-  cors = require('cors');
+  morgan = require("morgan");
 //archivo configuracion puerto y bind
 const config = require("../config/config.json");
 //archivo configuracion rutas

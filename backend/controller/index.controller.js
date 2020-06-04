@@ -13,7 +13,7 @@ function prueba(req, res) {
 //Creacion de los procesos de ingreso del usuario a la DB
 const createData = async (req, res) => {
   // CREAR
- const { name, email, password, ocupation, income, pet, adress, phone } = req.body; //parametros que el envian solicitudes
+  const { name, email, password, ocupation, income, pet, adress, phone } = req.body; //parametros que el envian solicitudes
   const data = new User({ name, email, password, ocupation, income, pet, adress, phone }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
   const correo = data.email;
   const nombre = data.name;
@@ -167,18 +167,46 @@ const private = (req, res) => {
   }]);
 }
 
-function verifyToken(req, res, next){
+function verifyToken(req, res, next) {
   //crear la cabecera de autenticacion
- if(!req.headers.authorization){
-   return res.status(401).send('No autorizado');
- }
- const token = req.headers.authorization.split(' ')[1];
- if (token == 'null'){
-   return res.status(401).sen('No autorizado')
- }
- const data = jwt.verify(token, 'secretkey')
- req.userId= data._id;
- next();git 
+  if (!req.headers.authorization) {
+    return res.status(401).send('No autorizado');
+  }
+  const token = req.headers.authorization.split(' ')[1];
+  if (token == 'null') {
+    return res.status(401).sen('No autorizado')
+  }
+  const data = jwt.verify(token, 'secretkey')
+  req.userId = data._id;
+  next(); git
+}
+
+//borrar todos los datos de una coleccion de mongo.....
+const dropAll = async (req, res) => {
+ //VISUALIZAR
+ 
+  //acceder a la informacion y usar la funcion find busca error  o los productos o datos que encunetre en la DB
+  // se accede a la base de datos directamente
+  await User.remove((err, dataEncontrada) => {
+    if (err) {
+      res.status(500).send({
+        message: "Server error ",
+      });
+    } else {
+      if (!dataEncontrada) {
+        res.status(200).send({
+          message: "No fue posible encontrar los registros",
+          statusCode: 400,
+        });
+      } else {
+        res.status(200).send({
+          status: "Productos encontrados",
+          producto: dataEncontrada,
+          statusCode: 200,
+        });
+      }
+    }
+  });
 }
 
 module.exports = {
@@ -189,7 +217,8 @@ module.exports = {
   delateData,
   login,
   private,
-  verifyToken
+  verifyToken, 
+  dropAll
 };
 
 
