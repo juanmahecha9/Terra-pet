@@ -169,3 +169,81 @@ font-family: 'Sniglet', cursive;
 .contenedor-form .formulario .reset-password:hover {
     background: #bc6c04;
 }
+
+@media(max-width: 1500px){
+    .contenedor-form{
+        width: 100%;
+       .toggle{
+           width: 90%;
+       }
+       .formulario{
+           width: 90%;
+           form{
+            width: 90%;
+            margin: auto;
+        }
+       }
+    }
+}
+
+@media(max-width: 1000px){
+    .contenedor-form{
+        width: 100%;
+       .toggle{
+           width: 90%;
+       }
+       .formulario{
+           width: 90%;
+           form{
+            width: 90%;
+            margin: auto;
+        }
+       }
+    }
+}
+@media(max-width: 700px){
+    .contenedor-form{
+        width: 100%;
+       .toggle{
+           width: 90%;
+       }
+       .formulario{
+           width: 90%;
+           form{
+            width: 90%;
+            margin: auto;
+        }
+       }
+    }
+}
+@media(max-width: 500px){
+    .contenedor-form{
+        width: 100%;
+       .toggle{
+           width: 90%;
+       }
+       .formulario{
+           width: 90%;
+           form{
+            width: 90%;
+            margin: auto;
+        }
+       }
+    }
+}
+
+@media(max-width: 400px){
+    .contenedor-form{
+        width: 100%;
+       .toggle{
+           width: 90%;
+       }
+       .formulario{
+           width: 90%;
+           form{
+            width: 90%;
+            margin: auto;
+        }
+       }
+    }
+}
