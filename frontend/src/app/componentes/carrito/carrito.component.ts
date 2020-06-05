@@ -46,5 +46,4 @@ export class CarritoComponent implements OnInit {
     console.log('mostrarAnimales ejecutado')
     console.log(this.animalesEncontrados);
   }
-
 }
