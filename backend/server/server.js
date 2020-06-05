@@ -1,7 +1,8 @@
 //configuracion del servidor
 const express = require("express"),
   mongoose = require("mongoose"),
-  morgan = require("morgan");
+  morgan = require("morgan"),
+  cors = require('cors')
 //archivo configuracion puerto y bind
 const config = require("../config/config.json");
 //archivo configuracion rutas
@@ -49,7 +50,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 //me devuelve eñ estado de la solicitud http
 app.use(morgan("dev"));
-
+app.use(cors());
 //rutas
 app.use('/api',router);
 app.use('/api',carro);
