@@ -1,5 +1,10 @@
 .cont-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    font-weight: bold;
+    opacity: .9;
 
     .btn-nav {
         position: absolute;
@@ -11,16 +16,20 @@
         left: 3px;
         justify-content: center;
         align-items: center;
+        background-color: #c2d63e;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px #00000013;
 
         &__icon {
-            width: 2.8em;
-            height: 2.8em;
+            width: 2.2em;
+            height: 2.2em;
             background-image: url(../../../assets/img/barra-menu_imgs/menu.svg);
             background-size: cover;
         }
 
         &:hover {
             cursor: pointer;
+            transform: scale(1.05);
         }
     }
 
@@ -31,7 +40,7 @@
         /* border: 1px solid purple; */
         animation-name: none;
         box-shadow: 0 2px 4px rgba(0, 0, 0, .06);
-    
+        
         &__link {
             text-decoration: none;
             padding: 1em;
@@ -75,17 +84,23 @@
             position: absolute;
             top: 4em;
             width: 200px;
-            z-index: 2;
+            z-index: 100;
             animation-name: ocultaMenu;
             animation-duration: .5s;
             animation-fill-mode: forwards;
+            box-shadow: 0 2px 4px #00000013;
+            border-radius: 0 4px 4px 0;
 
             &__cont-link {
-                border-bottom: 1px solid #fff;
+                border-bottom: 1px solid #ffffff9c;
+
+                &:last-child {
+                    border-bottom: none;
+                }
             }
 
             &__link {
-                width: 182px;
+                width: 200px;
                 padding: 18px 0 18px 18px;
             }
         }

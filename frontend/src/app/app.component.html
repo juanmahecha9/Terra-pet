@@ -1,5 +1,4 @@
 <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
-
 </ng-container>
 <ng-template #loggedIn>
   <li class="nav-item">
@@ -7,7 +6,7 @@
   </li>
 </ng-template>
 <app-barra-menu></app-barra-menu>
-<br>
+
 
   <router-outlet></router-outlet>
 
