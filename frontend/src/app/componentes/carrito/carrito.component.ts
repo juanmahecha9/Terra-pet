@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { carrito } from '../../models/carrito';
-import { CarritoService } from '../../service/carrito.service';
+import { CarritoService } from '../../services/carrito.service';
 
 @Component({
   selector: 'app-carrito',
@@ -10,13 +10,14 @@ import { CarritoService } from '../../service/carrito.service';
 export class CarritoComponent implements OnInit {
 
   public Carrito: carrito;
-  public animalesEncontrados: any[];
+  public animalesEncontrados: Array<string>;
 
   constructor(private service: CarritoService) {
     this.Carrito = new carrito();
   }
 
   ngOnInit(): void {
+    this.mostrarAnimales();
   }
 
   formularioUp() {
@@ -28,4 +29,22 @@ export class CarritoComponent implements OnInit {
       }
     });
   }
+
+  mostrarAnimales() {
+      this.service.getData().subscribe((response: any) => {
+        this.animalesEncontrados = response.carrito;
+      },
+      (error) => {
+        const errorMensaje = <any>error;
+
+        if (errorMensaje != null) {
+          console.log('Error:' + error);
+        }
+      }
+    );
+
+    console.log('mostrarAnimales ejecutado')
+    console.log(this.animalesEncontrados);
+  }
+
 }

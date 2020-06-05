@@ -6,7 +6,7 @@ const api = express.Router();
 
     /* rutas */
 api.post('/agregaranimal', carritoControl.createData);
-api.get('/carrito',carritoControl.getData);
+api.get('/mostrar',carritoControl.getData);
 api.delete('/asessinar/:id',carritoControl.matarAnimal);
 api.delete('/aniquilar',carritoControl.aniquilarAnimales);
 module.exports =

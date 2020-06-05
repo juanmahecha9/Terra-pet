@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-/* importar componentes */
+// Components
 import { EquipoComponent } from './componentes/equipo/equipo.component';
-import { LoginComponent } from './componentes/login/login.component';
-import { RegistroComponent } from './componentes/registro/registro.component';
 
 import { InicioComponent } from'./componentes/inicio/inicio.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
-
+import { SigninComponent } from './componentes/signin/signin.component';
+import { SignupComponent } from './componentes/signup/signup.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: '',
@@ -20,15 +20,7 @@ const routes: Routes = [
     path: 'team',
     component: EquipoComponent
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'registro',
-    component: RegistroComponent
-  },
-  {
+    {
     path: 'inicio',
     component: InicioComponent
   },
@@ -38,11 +30,20 @@ const routes: Routes = [
   },
   {
     path: 'photos',
-    component: FiltrosComponent
+    component: FiltrosComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'carrito',
     component: CarritoComponent
+  },
+  {
+    path: 'login',
+    component: SigninComponent
+  },
+  {
+    path: 'registro',
+    component: SignupComponent
   }
 ];
 
