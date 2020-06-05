@@ -12,4 +12,5 @@ export class producto {
     pet: String;
     adress: String;
     phone: String;
+    view: String
 };

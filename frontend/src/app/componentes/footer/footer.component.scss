@@ -1,16 +1,19 @@
-.mapa{
+.mp{
     width: 100%;
-    .mp{
+    background: #5b5772;
+   
+    .mp1{
+        
         width: 50%;
         margin: auto;
+        margin-top: 15px;
         text-align: center;
-       
-       iframe{
-
-        border-radius: 50%;
-    }}
+        padding: 10px;
+        iframe{
+            border-radius: 100px;
+        }
+    }
 }
-
 
 .footer-distributed{
     background: #c2d63e;

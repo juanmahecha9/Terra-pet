@@ -23,19 +23,21 @@ const user = Schema(
     ocupation: {
       type: String,
       require: true,
-    },income: {
+    }, income: {
       type: String,
       require: true,
-    },pet: {
+    }, pet: {
       type: String,
       require: true,
-    },adress: {
+    }, adress: {
       type: String,
       require: true,
-    },phone: {
+    }, phone: {
       type: String,
       require: true,
-    },
+    }, view: {
+      type: String
+    }
   },
   {
     timestamps: true,
@@ -76,10 +78,10 @@ se llama el modulo de bcrypt y se le pasa la contraseña que ingresa el usuario 
 que esta contenida en la base de datos, y a esto se le paan dos valores mas los cuales son
 un error y un boolean, si hay error se retorna el, si no se retorna el boolean el cual 
 sera falso o verdadero segun la clave que se ingrese */
-user.methods.compararPassword = function(password, cb) {
-  bcrypt.compare(password, this.password, function(err, match) {
-      if (err) return cb(err);
-      cb(null, match);
+user.methods.compararPassword = function (password, cb) {
+  bcrypt.compare(password, this.password, function (err, match) {
+    if (err) return cb(err);
+    cb(null, match);
   });
 };
 

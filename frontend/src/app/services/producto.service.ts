@@ -54,6 +54,25 @@ export class productoService {
             /*  se retorna el objeto el cual  por medio de http se le encia por medtodo post */
         ).pipe(res => res) /* convierte datos de entrea en datos de alida para que llegue a la api en forma de respuesta y nos trae la respuesta de nuestra api */
     }
+
+     /* edtitar contenido de la base de datos 
+    productosId, nuevosDatos, son los datos de las variables que usa esta funcion en el backend*/
+
+    upgradeData(productosId, nuevosDatos1) {
+        let params = JSON.stringify(nuevosDatos1);
+        /* convertir datos en un json */
+        let options = {
+            headers: new HttpHeaders({ 
+                'Content-type': 'application/json' }) 
+            };
+        /* Se crea una contante la cual sirve para indicar que la informacion que se enviara es de tipo json */
+        return this.http.put(
+            this.apiUrl + '/actualizar/' + productosId,
+            params, // se indica que son datos en forma de json
+            options // se indica que son datos en forma de json
+        ).pipe(res => res)
+        /* se trae el metodo put, se crea la ruta mas su id */
+    };
    
 
 }
