@@ -365,6 +365,44 @@ hr{
     }
 }
 
+@media screen and (min-width: 1125px){
+
+    .contenedor_portada{
+        height: 500px;
+    }
+    .contenedor-animais{
+        padding: 30px 15px;
+    }
+    .detalles p{
+        font-size: 21px;
+        font-weight: 200;
+        margin: auto;
+      
+    }
+    .detalles h1{
+        font-size: 37px;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+    .importa-adoptar{
+        font-size: 40px;
+    }
+    .parrafo{
+        font-size: 22px;
+    }
+    .detalles button{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .imagenes{
+        height: 410px;
+    }
+    .Titul{
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+}
+
 
 
 
