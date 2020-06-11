@@ -2,7 +2,7 @@
 const express = require("express"),
   mongoose = require("mongoose"),
   morgan = require("morgan"),
-  cors = require('cors')
+  cors = require('cors');
 //archivo configuracion puerto y bind
 const config = require("../config/config.json");
 //archivo configuracion rutas

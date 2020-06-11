@@ -1,19 +1,12 @@
 const Carrito = require('../models/carrito.models')
-
 const createData = async (req, res) => {
     // CREAR
     
     const { name, descripcion, region } = req.body; //parametros que el envian solicitudes
-    let carrito = new Carrito({ name, descripcion, region }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
+    /* antes: todos los mascota eran "carrito" */
+    let mascota = new Carrito({ name, descripcion, region }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
 
-    let parametros = req.body;
-
-    carrito.name = parametros.name;
-    carrito.descripcion = parametros.descripcion;
-    carrito.region = parametros.region;
-
-    carrito.save((err, animalNuevo) => {
-
+    mascota.save((err, animalNuevo) => {
 
         if (err) {
             res.status(500).send({ message: "error en el servidor bitch" });
@@ -28,7 +21,9 @@ const createData = async (req, res) => {
             }
     })
 }
- function getData(req, res){
+
+/* antes getData() */
+ function obtenerAnimales(req, res){
     Carrito.find((err, animalesEncontrados) => {
         if (err) {
             res.status(500).send({message:"error en el servidor"});
@@ -89,4 +84,4 @@ const aniquilarAnimales = async (req, res) => {
      });
    }
    
-module.exports = { createData, getData,matarAnimal,aniquilarAnimales}
+module.exports = { createData, obtenerAnimales, matarAnimal, aniquilarAnimales}

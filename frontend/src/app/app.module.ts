@@ -24,7 +24,7 @@ import { FiltrosComponent } from './componentes/filtros/filtros.component';
 import {productoService} from './services/producto.service';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
-/* import { CarritoService } from './services/carrito.service'; */
+import { CarritoService } from './services/carrito.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
     HttpClientModule
   ],
   providers: [
-    AuthGuard, /* CarritoService, */productoService,
+    AuthGuard, CarritoService, productoService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

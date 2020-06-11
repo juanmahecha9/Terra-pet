@@ -10,7 +10,7 @@ import { CarritoService } from '../../services/carrito.service';
 export class CarritoComponent implements OnInit {
 
   public Carrito: carrito;
-  public animalesEncontrados: Array<string>;
+  public animalesEncontrados: any=[];
 
   constructor(private service: CarritoService) {
     this.Carrito = new carrito();
@@ -31,7 +31,7 @@ export class CarritoComponent implements OnInit {
   }
 
   mostrarAnimales() {
-      this.service.getData().subscribe((response: any) => {
+      this.service.obtenerAnimal().subscribe((response: any) => {
         this.animalesEncontrados = response.carrito;
       },
       (error) => {
@@ -42,8 +42,5 @@ export class CarritoComponent implements OnInit {
         }
       }
     );
-
-    console.log('mostrarAnimales ejecutado')
-    console.log(this.animalesEncontrados);
   }
 }

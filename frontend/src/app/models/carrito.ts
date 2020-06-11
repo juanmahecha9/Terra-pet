@@ -1,6 +1,6 @@
 export class carrito {
     _id: String;
     name: String;
-    description: String;
+    descripcion: String;
     region: String;
 }

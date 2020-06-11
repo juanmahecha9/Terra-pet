@@ -6,7 +6,7 @@
     <br>
 
     <label for="">Descripción:</label>
-    <input type="text" name="descripcion" id="descripcion" placeholder="descripcion" required #nombre [(ngModel)]="Carrito.description">
+    <input type="text" name="description" id="description" placeholder="descripcion" required #nombre [(ngModel)]="Carrito.descripcion">
     <br>
 
     <label for="">Region:</label>
@@ -16,30 +16,22 @@
     <button>Guardar</button>
 </form>
 
-
 <div *ngFor="let contAnimal of animalesEncontrados">
 
-    {{contAnimal}}
-</div>
-
-<p>{{animalesEncontrados}}</p>
-<button (click)="mostrarAnimales()">Muestra</button>
-
-
-<!-- <div *ngFor="let contAnimal of animalesEncontrados">
-
-    <form action="" #actualizarAnimales="ngForm">
+    <!-- Indicar que es un formulario Angular -->
+    <form action="" #actualizarProductosForm="ngForm">
         <label for="">Nombre: </label>
-        <input type="text" id="nombre" required #nombre="ngModel" name="name" [(ngModel)]="contAnimal.name">
+        <!-- Input donde se insertarán lso datos de la DB a traves del contador creado en el ngFor -->
+        <input type="text" id="name" required #name="ngModel" name="name" [(ngModel)]="contAnimal.name">
         <br>
 
         <label for="">Marca: </label>
-        <input type="text" id="marca" required #nombre="ngModel" name="description" [(ngModel)]="contAnimal.description">
+        <input type="text" id="descripcion" required #descripcion="ngModel" name="descripcion" [(ngModel)]="contAnimal.descripcion>
         <br>
 
         <label for="">Precio: </label>
-        <input type="text" id="precio" required #nombre="ngModel" name="region" [(ngModel)]="contAnimal.region">
+        <input type="text" id="region" required #region="ngModel" name="region" [(ngModel)]="contAnimal.region">
         <br>
     </form>
     <br>
-</div> -->
+</div>
