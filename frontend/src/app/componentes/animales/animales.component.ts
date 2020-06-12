@@ -3,15 +3,16 @@ import { Router } from '@angular/router'
 
 import { PhotoService } from '../../services/photo.service'
 import { Photo } from '../../interfaces/Photo'
-//import {productoService } from '../../services/producto.service'
+// {productoService } from '../../services/producto.service'
 import {AuthService } from '../../services/auth.service'
 import {producto } from '../../models/producto'
 @Component({
-  selector: 'app-filtros',
-  templateUrl: './filtros.component.html',
-  styleUrls: ['./filtros.component.scss']
+  selector: 'app-animales',
+  templateUrl: './animales.component.html',
+  styleUrls: ['./animales.component.scss']
 })
-export class FiltrosComponent implements OnInit {
+export class AnimalesComponent implements OnInit {
+
   public Producto: producto;
   public productosEncontrados: any = []; /* los datos encontrados los va a guardar en un array */
 user={};
@@ -20,7 +21,7 @@ user={};
   constructor(
     private photoService: PhotoService,
     private router: Router,
-   // private service: productoService,
+    //private service: productoService,
     private authService: AuthService
     
   ) { this.Producto = new producto(); }
@@ -45,5 +46,4 @@ user={};
   }
  
 
- 
 }

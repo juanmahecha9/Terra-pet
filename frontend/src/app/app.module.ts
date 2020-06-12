@@ -21,10 +21,13 @@ import { FiltrosComponent } from './componentes/filtros/filtros.component';
 /* habilita los verbos http */
 /* permite el uso de los componentes del formulario para tomar los datos */
 /* importamos o concectamos el servicio al modulo principal */
-import {productoService} from './services/producto.service';
+
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CarritoService } from './services/carrito.service';
+import {productoService} from './services/adopcion.service';
+import { AdopcionComponent } from './componentes/adopcion/adopcion.component';
+import { AnimalesComponent } from './componentes/animales/animales.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,8 @@ import { CarritoService } from './services/carrito.service';
         FiltrosComponent,
         FooterComponent,
         CarritoComponent,
+        AdopcionComponent,
+        AnimalesComponent,
   ],
   imports: [
     BrowserModule,

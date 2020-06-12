@@ -6,11 +6,10 @@ import { PrivateTasksComponent } from './components/private-tasks/private-tasks.
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AuthGuard } from './auth.guard';
-import {PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.component'
+import { PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.component'
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component'
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component'
 import { UsuariosComponent } from './components/usuarios/usuarios.component'
- 
 const routes: Routes = [
   {
     path: '',
@@ -29,12 +28,12 @@ const routes: Routes = [
   {
     path: 'photos',
     component: PefilvistaComponent,
-    
+
   },
   {
     path: 'photos/:id',
     component: PefilpreComponent,
-   
+
   },
   {
     path: 'signin',
@@ -45,9 +44,10 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: 'usuarios',
+    path: 'usuario',
     component: UsuariosComponent
-  }
+  },
+  
 ];
 
 @NgModule({

@@ -16,6 +16,7 @@ import { PefilvistaComponent } from './components/pefilvista/pefilvista.componen
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
     PefilFotosComponent,
     PefilvistaComponent,
     PefilpreComponent,
-    UsuariosComponent
+    UsuariosComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
     HttpClientModule
   ],
   providers: [
-    AuthGuard,
+    AuthGuard, 
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

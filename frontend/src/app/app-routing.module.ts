@@ -9,13 +9,15 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { SigninComponent } from './componentes/signin/signin.component';
 import { SignupComponent } from './componentes/signup/signup.component';
+import {AdopcionComponent } from './componentes/adopcion/adopcion.component';
+import { AnimalesComponent } from './componentes/animales/animales.component'
+import { animationFrame } from 'rxjs/internal/scheduler/animationFrame';
 
 const routes: Routes = [
   {path: '',
   redirectTo: '/inicio', pathMatch: 'full'
   },
   {
-
     path: 'team',
     component: EquipoComponent
   },
@@ -43,7 +45,12 @@ const routes: Routes = [
   {
     path: 'registro',
     component: SignupComponent
-  }
+  },
+  {
+    path:'adopcion-proceso',
+    component: AdopcionComponent
+  },
+  
 ];
 
 @NgModule({
