@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // Components
 import { TasksComponent } from './components/tasks/tasks.component';
-import { PrivateTasksComponent } from './components/private-tasks/private-tasks.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AuthGuard } from './auth.guard';
@@ -10,6 +9,7 @@ import { PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.compon
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component'
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component'
 import { UsuariosComponent } from './components/usuarios/usuarios.component'
+import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopcion-registro.component'
 const routes: Routes = [
   {
     path: '',
@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'usuario',
     component: UsuariosComponent
   },
+  {
+path: 'solicitudes',
+component: AdopcionRegistroComponent
+  }
   
 ];
 

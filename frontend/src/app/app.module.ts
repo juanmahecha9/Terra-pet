@@ -25,7 +25,7 @@ import { FiltrosComponent } from './componentes/filtros/filtros.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CarritoService } from './services/carrito.service';
-import {productoService} from './services/adopcion.service';
+import { productoService } from './services/adopcion.service';
 import { AdopcionComponent } from './componentes/adopcion/adopcion.component';
 import { AnimalesComponent } from './componentes/animales/animales.component';
 
@@ -34,15 +34,15 @@ import { AnimalesComponent } from './componentes/animales/animales.component';
     AppComponent,
     SignupComponent,
     SigninComponent,
-        BarraMenuComponent,
-        EquipoComponent,
-        InicioComponent,
-        NosotrosComponent,
-        FiltrosComponent,
-        FooterComponent,
-        CarritoComponent,
-        AdopcionComponent,
-        AnimalesComponent,
+    BarraMenuComponent,
+    EquipoComponent,
+    InicioComponent,
+    NosotrosComponent,
+    FiltrosComponent,
+    FooterComponent,
+    CarritoComponent,
+    AdopcionComponent,
+    AnimalesComponent,
   ],
   imports: [
     BrowserModule,
