@@ -5,28 +5,28 @@
         <div class="contenedor">
             <!-- #DataFormulario="ngForm" define que el formulario con su id es un formulario angular -->
         <!-- (ngSubmit) ="FormularioUp() indica la accion a ejecutar cuando se envie el formulario -->
-        <label for="name">name: </label>
+        <label for="name">Nombre Completo: </label>
         <br>
         <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo" required #name="ngModel"
             [(ngModel)]="Producto.name">
         <!--[(ngMOdel)]="Producto.nombre" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
         #nombre="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
         <br>
-        <label for="email">email: </label>
+        <label for="email">Correo electronico: </label>
         <br>
         <input type="text" id="email" name="email" placeholder="Ingrese su correo electronico" required #email="ngModel"
             [(ngModel)]="Producto.email">
         <!--[(ngMOdel)]="Producto.email" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
             #email="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
         <br>
-        <label for="nombre">pet: </label>
+        <label for="nombre">Mascota y/o Mascostas de interes: </label>
         <br>
         <input type="text" id="pet" name="pet" placeholder="Mascota en la que esta interesado (Nombre)" required
             #pet="ngModel" [(ngModel)]="Producto.pet">
         <!--[(ngMOdel)]="Producto.pet" producto es lo que se importa y se inserta el nombre SIGNIFICA que el valor ingresado sera guardado en el modelo en el campo nombre
                 #pet="ngModel" SIGNIFICA QUE LE INPUT es un input de angular para tener acceso alos datos  -->
         <br>
-        <label for="nombre">phone: </label>
+        <label for="nombre">Telefono: </label>
         <br>
         <input type="text" id="phone" name="phone" placeholder="Ingrese su telefono de contacto" required
             #phone="ngModel" [(ngModel)]="Producto.phone">

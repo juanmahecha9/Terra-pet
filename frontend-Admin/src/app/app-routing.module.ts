@@ -8,7 +8,6 @@ import { AuthGuard } from './auth.guard';
 import { PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.component'
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component'
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component'
-import { UsuariosComponent } from './components/usuarios/usuarios.component'
 import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopcion-registro.component'
 const routes: Routes = [
   {
@@ -43,11 +42,7 @@ const routes: Routes = [
     path: 'signup',
     component: SignupComponent
   },
-  {
-    path: 'usuario',
-    component: UsuariosComponent
-  },
-  {
+   {
 path: 'solicitudes',
 component: AdopcionRegistroComponent
   }

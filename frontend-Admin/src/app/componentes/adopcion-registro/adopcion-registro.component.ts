@@ -47,7 +47,7 @@ this.mostrarProducto()
     this.service.upgradeData(producto._id, producto).subscribe(
       (response: any) => {
         if (response.producto) {
-          alert('Data actualizada.')
+          alert('Datos actualizados del solicitante.')
           this.mostrarProducto(); /* Mostrar el producto cuando se halla actualizado */
         } else {
           alert('Error.')
@@ -63,10 +63,10 @@ this.mostrarProducto()
   eliminarProductos(productoid) {
     this.service.eliminarProducto(productoid).subscribe((response: any) => {
       if (response.producto) {
-        alert("producto eliminado correctame chimba")
+        alert("Proceso rechazado.")
         this.mostrarProducto()
       } else {
-        alert("el producto no se elimino paila")
+        alert("Error.")
       }
     }, error => {
       if (error != null) {

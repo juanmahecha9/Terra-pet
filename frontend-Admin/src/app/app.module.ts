@@ -15,7 +15,6 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.component';
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component';
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component';
-import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopcion-registro.component';
 
 
@@ -28,7 +27,6 @@ import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopc
     PefilFotosComponent,
     PefilvistaComponent,
     PefilpreComponent,
-    UsuariosComponent,
     AdopcionRegistroComponent,
   ],
   imports: [
