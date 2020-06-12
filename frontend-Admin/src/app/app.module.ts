@@ -14,6 +14,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.component';
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component';
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PefilpreComponent } from './components/pefilpre/pefilpre.component';
     PrivateTasksComponent,
     PefilFotosComponent,
     PefilvistaComponent,
-    PefilpreComponent
+    PefilpreComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,

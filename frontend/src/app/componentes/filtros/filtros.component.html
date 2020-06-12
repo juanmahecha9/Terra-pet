@@ -5,13 +5,16 @@
             <div class="card-header">
                 {{photo.title}}
             </div>
-            <img [src]="'http://localhost:5000/' + photo.imagePath" class="classimg">
+            <div class="imagen">
+                <img [src]="'http://localhost:5000/' + photo.imagePath" class="classimg">
+            </div>
             <div class="card-body">
                 <p>{{photo.description}}</p>
             </div>
             <div class="btn">
                 <button (click)="actualizar()">Solicitar proceso de adopción</button>
-                <input style="display: none;" type="text" name="view" value="Interesado en adopción" [(ngModel)]=user.view id="">
+                <input style="display: none;" type="text" name="view" value="Interesado en adopción"
+                    [(ngModel)]=user.view id="">
             </div>
         </div>
     </div>

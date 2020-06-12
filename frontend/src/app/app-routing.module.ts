@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 // Components
 import { EquipoComponent } from './componentes/equipo/equipo.component';
-
 import { InicioComponent } from'./componentes/inicio/inicio.component';
 import { FiltrosComponent } from './componentes/filtros/filtros.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { SigninComponent } from './componentes/signin/signin.component';
 import { SignupComponent } from './componentes/signup/signup.component';
-import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: '',

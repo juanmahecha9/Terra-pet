@@ -25,7 +25,9 @@
             <div class="card-header">
                 {{photo.title}}
             </div>
-            <img [src]="'http://localhost:5000/' + photo.imagePath" class="img-card-top w-100">
+            <div class="imagenes">
+                <img [src]="'http://localhost:5000/' + photo.imagePath" class="img-card-top w-100">
+            </div>
             <div class="card-body">
                 <p>{{photo.description}}</p>
             </div>

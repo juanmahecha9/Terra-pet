@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private URL = 'http://localhost:8000/api';
+  private URL = 'http://localhost:8001/api';
   constructor(private http: HttpClient, private router: Router) { }
 
   signUpUser(user) {
@@ -27,7 +27,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/tasks']);
+    this.router.navigate(['/team']);
   }
 
   getToken() {

@@ -23,19 +23,24 @@ const user = Schema(
     ocupation: {
       type: String,
       require: true,
-    }, income: {
+    }, 
+    income: {
       type: String,
       require: true,
-    }, pet: {
+    }, 
+    pet: {
       type: String,
       require: true,
-    }, adress: {
+    }, 
+    adress: {
       type: String,
       require: true,
-    }, phone: {
+    }, 
+    phone: {
       type: String,
       require: true,
-    }, view: {
+    }, 
+    view: {
       type: String
     }
   },

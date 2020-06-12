@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from '../../services/auth.service'
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-barra-menu',
   templateUrl: './barra-menu.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService , private router:Router) { }
 
   ngOnInit() {
   }

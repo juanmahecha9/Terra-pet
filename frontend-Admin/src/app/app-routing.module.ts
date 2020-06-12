@@ -9,6 +9,7 @@ import { AuthGuard } from './auth.guard';
 import {PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.component'
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component'
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component'
+import { UsuariosComponent } from './components/usuarios/usuarios.component'
  
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
+  },
+  {
+    path: 'usuarios',
+    component: UsuariosComponent
   }
 ];
 
