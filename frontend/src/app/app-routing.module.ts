@@ -50,6 +50,10 @@ const routes: Routes = [
     path:'adopcion-proceso',
     component: AdopcionComponent
   },
+  {
+    path: 'chat',
+    component: AnimalesComponent
+  }
   
 ];
 

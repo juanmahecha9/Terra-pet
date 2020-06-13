@@ -13,9 +13,9 @@ function prueba(req, res) {
 //Creacion de los procesos de ingreso del usuario a la DB
 const createData = async (req, res) => {
   // CREAR
-  const { name, email,  ocupation, income, type1, pet, adress, phone } = req.body; //parametros que el envian solicitudes
-  const data = new User({ name, email, type1,  ocupation, income, pet, adress, phone }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
- 
+  const { name, email, ocupation, income, type1, pet, adress, phone } = req.body; //parametros que el envian solicitudes
+  const data = new User({ name, email, type1, ocupation, income, pet, adress, phone }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
+
 
   await data.save((err, newData) => {
     if (err) {
@@ -29,7 +29,7 @@ const createData = async (req, res) => {
           statusCode: 400,
         });
       } else {
-        
+
         res.status(200).send({
           status: "Nueva data",
           producto: newData,
@@ -105,7 +105,9 @@ function delateData(req, res) {
   //eliminar
   let dataId = req.params.id;
   //obtener el id del objeto
-
+  let datos = req.params.name;
+  let datos1 = req.params.email;
+  console.log(datos, datos1)
   //permite encontrar el id buscado y lo elimina del registro
   User.findByIdAndDelete(dataId, (err, dataEliminada) => {
     //base de datos, encuentra el id del producto, posee parametros de identificacion del id, error y el producto eliminado
@@ -121,7 +123,7 @@ function delateData(req, res) {
         });
       } else {
         res.status(200).send({
-          status: "Producto eliminado",
+          status: "Eliminado",
           producto: dataEliminada,
           statusCode: 200,
         });
@@ -136,6 +138,6 @@ module.exports = {
   showData,
   upgradeData,
   delateData,
-  };
+};
 
 

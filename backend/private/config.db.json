@@ -2,6 +2,6 @@
   "database": {
     "databaseName": "UserRegister",
     "url": "mongodb://localhost:27017/Users",
-    "web": "juanmahecha9509:95092206565jdmc"
+    "web": "admin1234567890:admin1234567890"
   }
 }

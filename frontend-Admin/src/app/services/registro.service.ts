@@ -8,8 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class RegistroService {
  /* ruta de la api, donde se consumen los datos */
- apiUrl = 'http://localhost:8021/api'
-
+ //apiUrl = 'http://localhost:8021/api'
+apiUrl = 'https://solicitudadopcionbackend.herokuapp.com/api'
  /* Crear una variable privada. Para que la informaciòn viaje de manera privada */
  constructor(private http: HttpClient) {
 

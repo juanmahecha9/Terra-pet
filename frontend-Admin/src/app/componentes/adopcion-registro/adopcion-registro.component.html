@@ -41,10 +41,10 @@
         <label for="email">email: </label> <br>
         <input type="text" id="email" required #email="ngModel" name="email" [(ngModel)]=producto.email>
         <br>
-        <label for="pet">pet: </label> <br>
+        <label for="pet">mascota: </label> <br>
         <input type="text" id="pet" required #pet="ngModel" name="pet" [(ngModel)]=producto.pet>
         <br>
-        <label for="phone">phone: </label> <br>
+        <label for="phone">Telefono: </label> <br>
         <input type="text" id="phone" required #phone="ngModel" name="phone" [(ngModel)]=producto.phone>
         <br>
         <label for="ocupation">ocupación: </label> <br>
@@ -58,6 +58,9 @@
         <br>
         <label for="type1">Tipo de vivienda: </label> <br>
         <input type="text" id="type1" required #type1="ngModel" name="type1" [(ngModel)]=producto.type1>
+        <br>
+        <label for="createdAt">Fecha Solicitud: </label> <br>
+        <input type="text" id="type1" required #tcreatedAt="ngModel" name="createdAt" [(ngModel)]=producto.createdAt>
         <br>
     </form>
 
