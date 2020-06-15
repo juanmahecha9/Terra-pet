@@ -16,6 +16,8 @@ import { PefilFotosComponent } from './components/pefil-fotos/pefil-fotos.compon
 import { PefilvistaComponent } from './components/pefilvista/pefilvista.component';
 import { PefilpreComponent } from './components/pefilpre/pefilpre.component';
 import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopcion-registro.component';
+import { GaleriaComponent } from './componentes/galeria/galeria.component';
+import { NotificacionComponent } from './componentes/notificacion/notificacion.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopc
     PefilvistaComponent,
     PefilpreComponent,
     AdopcionRegistroComponent,
+    GaleriaComponent,
+    NotificacionComponent,
   ],
   imports: [
     BrowserModule,

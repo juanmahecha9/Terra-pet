@@ -8,8 +8,8 @@ import {Photo} from '../interfaces/Photo'
 })
 export class PhotoService {
 
-  URI = 'http://localhost:5000/api/photos';
-
+  //URI = 'http://localhost:5000/api/photos';
+URI ='https://fotosbackend.herokuapp.com/api/photos'
   constructor(private http: HttpClient) { }
 
   createPhoto(title: string, description: string, photo: File) {
