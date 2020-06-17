@@ -7,5 +7,5 @@ export class producto {
     title: String;
     description: String;
     url: String;
-  }
-  
+    public_id:String;
+};

@@ -18,6 +18,7 @@ import { PefilpreComponent } from './components/pefilpre/pefilpre.component';
 import { AdopcionRegistroComponent } from './componentes/adopcion-registro/adopcion-registro.component';
 import { GaleriaComponent } from './componentes/galeria/galeria.component';
 import { NotificacionComponent } from './componentes/notificacion/notificacion.component';
+import { CargarimagenComponent } from './componentes/cargarimagen/cargarimagen.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { NotificacionComponent } from './componentes/notificacion/notificacion.c
     AdopcionRegistroComponent,
     GaleriaComponent,
     NotificacionComponent,
+    CargarimagenComponent,
   ],
   imports: [
     BrowserModule,

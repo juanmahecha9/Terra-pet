@@ -1,3 +1,7 @@
 #private
 node_modules
 .DS_Store
+backend
+backend-Admin
+backend-solicitud
+Fotos-Backend
