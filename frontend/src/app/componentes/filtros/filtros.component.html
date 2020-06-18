@@ -42,14 +42,14 @@
               <img
                 class="imagendb"
                 style="width: 100%;"
-                [srcfotos en linea="producto.url"
+                [src]="producto.url"
                 alt="producto.title"
               />
               <div class="card-body">
                 <h4  style="text-align: center; color: green;" class="card-title">Peludito:</h4>
                 <h3>{{ producto.title }}</h3>
                 <br />
-                <i style="text-align: justify;" >{{ producto.description }}</i>
+                <i>{{ producto.description }}</i>
               </div>
               <div class="card-footer">
                 <span>
