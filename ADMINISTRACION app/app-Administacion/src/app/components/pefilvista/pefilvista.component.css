@@ -18,3 +18,34 @@ img {
     width: 50%;
     float: left;
 }
+
+.card-group{
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+@media screen and (max-width: 1130px){
+  .card{
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 993px){
+  .card{
+    width: 17rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .card{
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .card{
+    width: 13rem;
+  }
+}
