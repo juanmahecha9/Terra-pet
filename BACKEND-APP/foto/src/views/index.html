@@ -8,23 +8,24 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container cont pd-5 mt-5">
-        <div class="container contenido">
+    <div class="container  pd-5 mt-5">
+        <div class="container ">
 
-            <div class="carta card" style="width: 25rem;">
+            <div class="carta card " style="width: 25rem;">
                 <img class="im" src="https://byspel.com/wp-content/uploads/2017/01/upload-cloud.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <br>
+                    <hr color="blue" width="100">
                   <h5 style="text-align: center;" class="card-title">Subir al Peludito a la base de datos</h5>
                   <br>
-                  <form action="/add" method="POST" enctype="multipart/form-data">
+                  <form class="container ml-3" action="/add" method="POST" enctype="multipart/form-data">
                     <label style="text-align: center;" for="title">Nombre del peludo</label>
                     <input placeholder="Nombre del peludo" class="nombre input-group-prepend" type="text" name="title" id="">
                     <br>
                     <label style="text-align: center;" for="title">Descripcion del peludo</label>
-                    <textarea name="description" id="" cols="30" rows="10" class="nombre input-group-prepend" placeholder="Descripcion del peludito"></textarea>
+                    <textarea name="description" id="" cols="30" rows="10" class="nombre  input-group-prepend" placeholder="Descripcion del peludito"></textarea>
                     <br>
-                    <input type="file" name="imagen">
+                    <input class="file-input btn btn-block btn-primary btn-file archivo" type="file" name="imagen">
                         <br>
                         <br>
 
@@ -33,10 +34,7 @@
                     </div>
                     </form>
                 </div>
-              </div>
-            
-        </div>
-       
+              </div>  
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
