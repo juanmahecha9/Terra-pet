@@ -28,6 +28,7 @@ import { CarritoService } from './services/carrito.service';
 import { productoService } from './services/adopcion.service';
 import { AdopcionComponent } from './componentes/adopcion/adopcion.component';
 import { AnimalesComponent } from './componentes/animales/animales.component';
+import { ChatbotComponent } from './componentes/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AnimalesComponent } from './componentes/animales/animales.component';
     CarritoComponent,
     AdopcionComponent,
     AnimalesComponent,
+    ChatbotComponent,
   ],
   imports: [
     BrowserModule,

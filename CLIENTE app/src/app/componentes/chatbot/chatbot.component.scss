@@ -1,0 +1,54 @@
+.cont-frame {
+    position: relative;
+
+    .mi-iframe {
+        width: 400px;
+        height: 450px;
+        position: fixed;
+        right: 6em;
+        bottom: 0;
+        animation-name: ocultaMenu;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+    }
+
+    .btn-chat {
+        width: 64px;
+        height: 64px;
+        position: fixed;
+        right: .5em;
+        bottom: .5em;
+        background-image: url(../../../assets/chat.svg);
+        background-size: cover;
+        box-shadow: 0 2px 4px #00000013;
+            border-radius: 0 4px 4px 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/* Responsive si es menos de 600px */
+@media (max-width:768px) {
+    .cont-frame {
+
+        .mi-iframe {
+            width: 300px;
+            right: 7em;
+        }
+    }
+}
+
+/* Animaciones */
+@keyframes ocultaChat {
+    0% {right: 4em;}
+    100% {right: -100%;}
+}
+
+@keyframes muestraChat {
+    0% {right: -100%;}
+    100% {right: 4em;}
+}
+
+
