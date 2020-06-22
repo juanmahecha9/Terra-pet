@@ -5,14 +5,14 @@ h3{
     width: 100%;
 }
 .listado .datos{
-    width: 60%;
+    width: 90%;
     margin: auto;
     border: 1px black solid;
     border-radius:  15px;
 }
 
 .listado .datos form{
-    width: 60%;
+    width: 90%;
     padding: 15px;
     margin: auto;
 }

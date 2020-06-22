@@ -42,14 +42,12 @@
       <!-- #actualizarProductos = "ngForm"  indicar que es un formulario de agular -->
       <form #actualizarProductos="ngForm">
         <label for="nombre">Nombre: </label> <br />
-        <input
-          type="text"
-          id="nombre"
-          required
-          #nombre="ngModel"
-          name="name"
-          [(ngModel)]="producto.name"
-        />
+        <textarea type="text"
+        id="nombre"
+        required
+        #nombre="ngModel"
+        name="name"
+        [(ngModel)]="producto.name"></textarea>
         <br />
         <!-- Crear el input done se inserta ls datos para actualizar -->
         <label for="email">email: </label> <br />
