@@ -1,0 +1,128 @@
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+a{
+	text-decoration: none;
+}
+
+ul{list-style-type: none;}
+
+.calendar{
+	width: 100%;
+	background: #E3E3E3;
+}
+
+.calendar .header-calendar{
+	width: 100%;
+	height: auto;
+	background: #1ABC9C;
+}
+
+.calendar .header-calendar ul{
+	width: 100%;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.calendar .header-calendar ul li{
+	color: #FFF;
+	font-size: 2em;
+	text-align: center;
+}
+
+.calendar .header-calendar ul li span{
+	font-size: 14px;
+	display: block;
+}
+
+.calendar .header-calendar ul li.prev,
+.calendar .header-calendar ul li.next{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	position: absolute;
+	font-size: 20px;
+	cursor: pointer;
+	line-height: 40px;
+	transition: background 0.3s ease;
+}
+
+.calendar .header-calendar ul li.prev:hover,
+.calendar .header-calendar ul li.next:hover{
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.calendar .header-calendar ul li.prev{
+	left: 10px;
+}
+
+.calendar .header-calendar ul li.next{
+	right: 10px;
+}
+
+/* Días (Nombres) */
+
+.calendar ul.weekdays,
+.calendar ul.days{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.calendar ul.weekdays{
+	background: rgba(0, 0, 0, .1);
+}
+
+.calendar ul.weekdays li{
+	width: 14.28%;
+	text-align: center;
+	padding: 20px;
+	color: rgba(0, 0, 0, .6);
+}
+
+/* Días (El numerito :v) */
+
+.calendar ul.days li{
+	width: 14.28%;
+	text-align: center;
+	padding: 15px;
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+}
+
+.calendar ul.days li.active{
+	background: #1ABC9C;
+	color: #FFF;
+}
+.eventoi{
+    display: none;
+}
+.listaeventos{
+    display: none;
+}
+@media (max-width: 800px){
+   
+        p{
+            display:none;        
+        }
+        .eventoi{
+            display: block; 
+        }  
+        .listaeventos{
+            display: block;
+        }  
+    
+
+}

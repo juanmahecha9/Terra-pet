@@ -1,15 +1,22 @@
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './componentes/signup/signup.component';
 import { SigninComponent } from './componentes/signin/signin.component';
 
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+
 import { BarraMenuComponent } from './componentes/barra-menu/barra-menu.component';
 import { EquipoComponent } from './componentes/equipo/equipo.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
@@ -29,6 +36,7 @@ import { productoService } from './services/adopcion.service';
 import { AdopcionComponent } from './componentes/adopcion/adopcion.component';
 import { AnimalesComponent } from './componentes/animales/animales.component';
 import { ChatbotComponent } from './componentes/chatbot/chatbot.component';
+import { CalendarioComponent } from './componentes/calendario/calendario.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +53,18 @@ import { ChatbotComponent } from './componentes/chatbot/chatbot.component';
     AdopcionComponent,
     AnimalesComponent,
     ChatbotComponent,
+    CalendarioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    })
   ],
   providers: [
     AuthGuard, CarritoService, productoService,

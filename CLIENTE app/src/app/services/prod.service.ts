@@ -17,7 +17,7 @@ export class ProdService {
 
   /* ruta de la api, donde se consumen los datos */
    //apiUrl = 'http://localhost:3000'
-apiUrl = 'http://fotoscloud.herokuapp.com'
+apiUrl = 'https://fotoscloud.herokuapp.com'
 /* Crear una variable privada. Para que la informaciòn viaje de manera privada */
 constructor(private http: HttpClient) {
 

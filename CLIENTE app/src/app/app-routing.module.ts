@@ -13,6 +13,8 @@ import {AdopcionComponent } from './componentes/adopcion/adopcion.component';
 import { AnimalesComponent } from './componentes/animales/animales.component'
 import { animationFrame } from 'rxjs/internal/scheduler/animationFrame';
 
+import { CalendarioComponent } from './componentes/calendario/calendario.component'
+
 const routes: Routes = [
   {path: '',
   redirectTo: '/inicio', pathMatch: 'full'
@@ -53,6 +55,10 @@ const routes: Routes = [
   {
     path: 'chat',
     component: AnimalesComponent
+  },
+  {
+    path:'calendario',
+    component: CalendarioComponent
   }
   
 ];
