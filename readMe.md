@@ -48,3 +48,6 @@ Frontend
 -En el css principal puse un normalizador de css: Esto es para resetear los estilos generales
 -Se agrega la carpeta "img" dentro de la carpeta "assets", aquí dentro van los recursos estatico de la página (imagenes, iconos etc)
 -Se borra todo el código que viene por defecto en el componente principal (app.component.html)
+
+***
+Todos los services estan cargados en un heroku HTTPS
