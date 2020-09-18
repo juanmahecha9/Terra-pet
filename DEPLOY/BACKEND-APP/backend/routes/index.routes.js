@@ -6,7 +6,7 @@ const router = express.Router(); //configurar las rutas que se van a usar
 
 //Prueba del servicio y las rutas
 router.get("/pruebaS", control.prueba);
-
+router.get("/byid/:id", control.getById);
 //Datos usuario
 //Crear la ruta para el control Crear datos y llamar la funcion en especifico de ese documento
 router.post("/new", control.createData);

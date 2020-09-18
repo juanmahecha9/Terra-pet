@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 //prueba del servidor
 function prueba(req, res) {
-  res.send("Hola Juan...");
+  res.send("Hola Juan David, db conectada en mongo");
 }
 
 //Creacion de los procesos de ingreso del usuario a la DB
@@ -70,6 +70,37 @@ function showData(req, res) {
       }
     }
   });
+}
+
+const getById =async (req, res) => {
+//Actualizar
+let productosId = req.params.id;
+//incicar que uno de los parametros  para modificar va a ser el id
+// variable donde almacenar estos datos:
+
+//control es la variale del modelo Buscar el objeto por el ID y actualizar
+//encontrar producto id o parametro, en conjutno con los nuevos datos, se crea una funcion error o actualizado
+//ese id lo creo mongo...
+User.findById(productosId, (err, dataEncontrada) => {
+  if (err) {
+    res.status(500).send({
+      message: "Server error ",
+    });
+  } else {
+    if (!dataEncontrada) {
+      res.status(200).send({
+        message: "No fue posible encontrar los registros",
+        statusCode: 400,
+      });
+    } else {
+      res.status(200).send({
+        status: "Productos encontrados",
+        producto: dataEncontrada,
+        statusCode: 200,
+      });
+    }
+  }
+});
 }
 
 function upgradeData(req, res) {
@@ -145,7 +176,7 @@ const login = async (req, res) => {
         const token = jwt.sign({ _id: user._id }, 'secretkey')
         return res.status(200).send(
           {
-            value: "Contraseña Valida", token: token
+            value: "Contraseña Valida", token: token, id: user._id,
           });
       }
       if (isMatch != true) return res.status(401).send("Contraseña Invalida");
@@ -154,9 +185,6 @@ const login = async (req, res) => {
 };
 
 const private = (req, res) => {
-
-
-
   res.json([{
     nombre: 'Juan',
     apellido: 'Mahecha'
@@ -218,7 +246,8 @@ module.exports = {
   login,
   private,
   verifyToken, 
-  dropAll
+  dropAll,
+  getById
 };
 
 
