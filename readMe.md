@@ -1,3 +1,7 @@
+Elaboración de una página web, dedicada a la adopción de animales, con la creación de una página de clientes y otra de administración del sitio web, realizada con las herramientas MEAN, proyecto final del bootcamp fullstack de desarrollo web BIT, 2020 https://administracion-terrapet.herokuapp.com/
+https://http://terrapet.herokuapp.com/
+
+
 // Documento de configuracion de puertos, binding o ip para su restriccion
 const config = require('./config/config.json');
 /*Configuracion del puerto y del bind */
